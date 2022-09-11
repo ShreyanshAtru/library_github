@@ -1,6 +1,7 @@
 # library_github
 # A basic library management system , where User login a s a super user and can add, delete , update a book.
-# there are two tables 
+
+there are two tables 
     - User 
     - Book 
 To access the project , clone the repostiry in your local system by 
