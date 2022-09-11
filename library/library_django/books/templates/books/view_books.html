@@ -1,0 +1,42 @@
+<head>
+	<title>Page Title</title>
+	<style>
+    body {background-color: rgba(211, 220, 190, 0.815);}
+		table,
+		th,
+		td {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		/* setting the text-align property to center*/
+		td {
+			padding: 5px;
+			text-align: center;
+		}
+	</style>
+</head>
+
+
+{% block content %}
+    <h5>
+        <h4>Books Records </h4>
+        <thead>
+            
+        
+        {% for obj in books %}
+        <tr>
+            <h5>Book id : {{obj.id}} </h5>
+            <h5>Book name : {{obj.book_title}}</h5>
+			<h5>Book name : {{obj.book_author}}</h5>
+
+            <br>
+        </tr>
+        {% endfor %}
+
+    </thead>
+
+	<a href="{% url 'book-create/' %}">New entry for book</a>
+
+    </h5>
+
+{% endblock %}
